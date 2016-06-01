@@ -19,7 +19,7 @@ def form():
     curseur.execute("SELECT DISTINCT nom FROM activite ORDER BY nom asc")
     activity_tab = curseur.fetchall()
 
-    return template('template', city_tab = city_tab, activity_tab = activity_tab)
+    return template('templates/template', city_tab = city_tab, activity_tab = activity_tab)
 
 
 @post('/')
@@ -39,14 +39,14 @@ def do_recherche():
         curseur.execute("SELECT i.nom, e.nom, a.nom, i.ville, i.numero FROM INSTALLATION i JOIN EQUIPEMENT e ON i.numero = e.numero_installation JOIN EQUIPEMENT_ACTIVITE ea ON e.numero = ea.numero_equipement JOIN ACTIVITE a ON ea.numero_activite = a.numero WHERE i.ville = ? AND a.nom LIKE '%"+activite+"%'", (ville,))
         answer_list = curseur.fetchall()
 
-    return template('template2', answer = answer_list)
+    return template('templates/template2', answer = answer_list)
 
 @get('/maps/<id_installation>')
 def build_maps(id_installation):
     curseur.execute("SELECT i.nom, i.ville,i.code_postal, i.numeroRue,i.rue, i.latitude , i.longitude  FROM INSTALLATION i WHERE i.numero = ? ", (id_installation,))
     answer_list = curseur.fetchall()
 
-    return template('template3', answer = answer_list)
+    return template('templates/template3', answer = answer_list)
 
 
 run(host='localhost', port=8080)
