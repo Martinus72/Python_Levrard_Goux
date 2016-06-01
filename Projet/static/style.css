@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "myfont";
+    src: url('Lovelo Line Light.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "myfontbold";
+    src: url('Lovelo Line Bold.otf') format("opentype");
+}
+
+h1{
+	font-family: myfont;
+	font-size: 100px;
+	color: #f1c40f;
+}
+
+h3{
+	font-family: myfontbold;
+	font-size: 30px;
+	color: #f1c40f;
+}
