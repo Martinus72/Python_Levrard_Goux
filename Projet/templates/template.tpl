@@ -25,29 +25,31 @@
     <body>
         <div class="row">
             <div class="col-lg-1"></div>
-            <div class="col-lg-10">
+            <div class="col-lg-3">
             <h1>Sport Advisor</h1>
-                <form action="/" method="post">
-                    <h3>Activite:</h3>
-                    <Select name="activity"  class="form-control">
-                        <option value="empty">Choisir une activité</option>
-                        %for option in activity_tab:
-                            <option value = "{{option[0]}}"> {{option[0]}} </option>
-                        %end
-                    </Select>
+                <div class="form">
+                  <form action="/" method="post">
+                      <h3>Activite:</h3>
+                      <Select name="activity"  class="form-control">
+                          <option value="empty">Choisir une activité</option>
+                          %for option in activity_tab:
+                              <option value = "{{option[0]}}"> {{option[0]}} </option>
+                          %end
+                      </Select>
 
-                    <h3>Ville:</h3>
-                    <Select name="city"  class="form-control">
-                        <option value="empty">Choisir une ville</option>
-                        %for option in city_tab:
-                            <option value = "{{option[0]}}"> {{option[0]}} </option>
-                        %end
-                    </Select>
+                      <h3>Ville:</h3>
+                      <Select name="city"  class="form-control">
+                          <option value="empty">Choisir une ville</option>
+                          %for option in city_tab:
+                              <option value = "{{option[0]}}"> {{option[0]}} </option>
+                          %end
+                      </Select>
 
-                    <br>
+                      <br>
 
-                    <input class="btn btn-default" value="Rechercher" type="submit">
-                </form>
+                      <input class="btn btn-default" value="Rechercher" type="submit">
+                  </form>
+                </div>
             </div>
         </div>
     </body>
