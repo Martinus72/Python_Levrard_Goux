@@ -36,9 +36,9 @@
                 <thead>
                     <tr>
                         <th>Nom de l'installation</th>
-                        <th>Nom de l'équipement</th>
-                        <th>Nom de l'activité</th>
-                        <th>Nom de la ville</th>
+                        <th>Equipement</th>
+                        <th>Activité</th>
+                        <th>Ville</th>
                         <th>Map</th>
                     </tr>
                 </thead>
